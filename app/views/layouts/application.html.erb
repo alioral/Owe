@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Owe</title>
+  <%= stylesheet_link_tag    "social-buttons", "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container-narrow">
+
+  <div class="jumbotron">
+    <h1>Welcome to Owe!</h1>
+    <p class="lead">Owe is a minimalist tool that checks who owes you money. Features like 
+      social network alerts, reminders Owe will be your ultimate financial companion.</p>
+    
+    <a class="btn btn-facebook" href="/auth/facebook">
+    	<i class="icon-facebook"></i> Connect with Facebook
+    </a>
+    <a class="btn btn-twitter" href="/auth/twitter">
+    	<i class="icon-twitter"></i> Connect with Twitter
+    </a>
+  
+  </div>
+
+  <hr>
+
+  <div class="row-fluid marketing">
+    <div class="span4">
+      <h4>Easy</h4>
+      <p>Without the complication of the current  tools, Owe will be including just a few steps to get your financial life together.</p>
+    </div>
+
+    <div class="span4">
+      <h4>Intuitive</h4>
+      <p>No skills require, Owe is simple as posting a tweet or sharing a picture on your Facebook.</p>
+    </div>
+
+    <div class="span4">
+      <h4>Free</h4>
+      <p>Use it! No enterprise fee, no premium account. Owe is a free service and always will be.</p>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p class="muted">&copy; Owe 2013</p>
+  </div>
+
+</div>
+
+</body>
+</html>

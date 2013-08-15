@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lender: MyString
+  borrower: MyString
+  amount: 1
+  status: 1
+  deadline_at: 2013-08-14 16:06:19
+
+two:
+  lender: MyString
+  borrower: MyString
+  amount: 1
+  status: 1
+  deadline_at: 2013-08-14 16:06:19

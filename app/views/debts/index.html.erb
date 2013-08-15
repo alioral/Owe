@@ -1,0 +1,48 @@
+<h2 class="text-info">Debts</h2>
+<div class="row-fluid">
+	<div class="span8">
+	<% @debts.each do |d| %>
+			<div class="debt-owner-div">
+				<table>
+					<tr>
+						<td>
+							<h4>
+							<%= link_to "Debt #" + d.id.to_s, d %>
+							</h4>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<strong class="text-info">Borrower Username:&nbsp</strong>
+						</td>
+						<td><%= d.borrower %></td>
+					</tr>
+					<tr>
+						<td>
+							<strong class="text-info">Amount:&nbsp</strong>
+						</td>
+						<td><%= d.amount %></td>
+					</tr>
+					<tr>
+						<td>
+							<strong class="text-info">Due date:&nbsp</strong>
+						</td>
+						<td><%= d.deadline_at %></td>
+					</tr>
+				</table>
+				<p align="right" style="padding-right:10px;margin:0;">
+					<%= link_to "Edit", edit_debt_path(d), :class => "text-error" %> |
+					<%= link_to "Delete", d, :class => "text-error", :confirm => "Are you sure you would like to delete this debt?", :method => :delete %>				
+				</p>
+			</div>
+	<% end %>
+	</div>
+
+	<div class="span4">
+		<a href='/debts/new'>
+			<strong style="font-size:16px;">Create new debt</strong>
+		</a>
+	</div>
+</div>

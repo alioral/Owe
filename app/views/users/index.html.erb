@@ -1,0 +1,13 @@
+<h2>
+   Welcome,
+   <% if session[:user] != nil%>
+      <%= session[:user].name %>
+   <% else %>
+      <h1>You are not logged in!</h1>
+   <% end %>
+</h2>
+
+<p class="muted">You can start exploring the system by 
+   <%= link_to "viewing your debts", debts_path %> or
+   <%= link_to "viewing your debt archieve", debts_path %>
+   .</p>

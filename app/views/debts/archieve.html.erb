@@ -1,0 +1,34 @@
+<h1>Debt Archieve</h1>
+
+<h3 class="text-info">Unpaid Debts</h3>
+<hr/>
+<% @debtUnpaid.each do |unpaid| %>
+	<div>
+		<strong>
+			<%= unpaid.provider %> Username:
+		</strong>
+		<%= unpaid.borrower %> <br/>
+		<strong>Debt Amount: </strong>
+		<%= unpaid.amount %> <br/>
+		<strong>Debt Deadline: </strong>
+		<%= unpaid.deadline_at%>
+	</div>
+	<hr/>
+<% end %>
+
+<h3 class="text-info">Paid Debts</h3>
+<hr/>
+<% @debtPaid.each do |paid| %>
+	<div>
+		<strong>
+			<%= paid.provider %> Username:
+		</strong>
+		<%= paid.borrower %> <br/>
+		<strong>Debt Amount: </strong>
+		<%= paid.amount %> <br/>
+		<strong>Debt Deadline: </strong>
+		<%= paid.deadline_at%>
+	</div>
+	<hr/>
+<% end %>
+

@@ -1,0 +1,29 @@
+<h2>Debt # <%= @debt.id %></h2>
+<br>
+<table>
+	<tr>
+		<td><strong>Borrower:</strong></td>
+		<td><%= @debt.borrower %></td>
+	</tr>
+	<tr>
+		<td><strong>Amount:</strong></td>
+		<td><%= @debt.amount %></td>
+	</tr>
+	<tr>
+		<td><strong>Due Date: </strong></td>
+		<td><%= @debt.deadline_at %></td>
+	</tr>
+	<tr>
+		<td>&nbsp</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<strong>
+			<%= link_to "Edit", "/debts/" + @debt.id.to_s + "/edit", :class => "text-error" %>
+			</strong>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,55 @@
+<h2 class="text-info">Edit debt info</h2>
+<br/>
+<% if @debt != nil %>
+	<%= form_for @debt, :html => {:class => "form-horizontal"} do |m| %>
+      <div class="control-group">
+          <%= m.label :borrower, :class => "control-label" %>
+        <div class="controls">
+          <%= m.text_field :borrower, :placeholder => "Twitter of Facebook username" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+          <%= m.label :amount, :class => "control-label" %>
+        <div class="controls">
+          <%= m.text_field :amount, :placeholder => "Amount" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+          <%= m.label :provider, :class => "control-label" %>
+        <div class="controls">
+          <%= m.select :provider, options_for_select([['Facebook' ,'Facebook'], 
+          ['Twitter', 'Twitter']], :selected => @debt.provider) %>
+        </div>
+      </div>
+
+      <div class="control-group">
+          <%= m.label :status, :class => "control-label" %>
+        <div class="controls">
+          <%= m.select :status, options_for_select([['Active' ,'0'], 
+          ['Closed', '1']], :selected => @debt.status) %>
+        </div>
+      </div>
+
+      <div class="control-group">
+          <%= m.label :deadline_at, :class => "control-label" %>
+        <div class="controls">
+          <%= m.text_field :deadline_at, 'data-behaviour' => 'datepicker', :placeholder => "Due date"  %>
+          <script type="text/javascript">
+            $('[data-behaviour~=datepicker]').datepicker({"format":"mm-dd-yyyy"});
+          </script>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= m.submit "Save", :class => "btn btn-success" %>
+        </div>
+      </div>
+
+
+    <% end %>
+<% else %>
+	<h3>Goom!</h3>
+<% end %>
